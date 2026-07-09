@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: khmer-tts-api
+    runtime: node
+    buildCommand: |
+      npm install
+      pip install -r requirements.txt
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
